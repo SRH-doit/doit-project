@@ -4,15 +4,20 @@
 
 ## 시작!
 
-##진행 상황
+## 진행 상황
 
 v.0.0.1 - 초기상태 입니다.
 
 ## 참여자
 
--   **Billie Thompson** - _Initial work_ - [PurpleBooth](https://github.com/PurpleBooth)
+-   **국재윤** - _Initial work_ - [msg2324](https://github.com/igiza1213)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+또한 여기서 [협업자들](https://github.com/SRH-doit) 을 보실수 있습니다!
+
+## 각주
+
+귀찮아서 템플릿 가져다 쓰고 대충 만들었으니 수정하실분은 부디 수정해주시기 바랍니다.
+필자는 이런거 아무것도 몰라요
 
 <!-- These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system. -->
 
