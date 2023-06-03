@@ -18,18 +18,10 @@
 ┃ ┃ ┗ 📜style.css - 모든 css 파일을 규합하는 css
 ┣ 📜.gitignore - github에 올라가지 않을 파일을 명시
 ┣ 📜app.js - express 파일
+┣ 📜nodemon.json - nodemon 설정을 명시
 ┣ 📜package-lock.json - npm 다운 파일을 상세 명시
 ┣ 📜package.json - npm 다운 파일과 실행 script, 상세 내용등을 명시
 ┗ 📜README.md - github README 파일
-
-📦public
-┣ 📂javascripts
-┗ 📂styles
-┃ ┣ 📂components
-┃ ┣ 📂screens
-┃ ┃ ┗ 📜Home.css
-┃ ┣ 📜reset.css
-┃ ┗ 📜style.css
 
 ## 실행 방법
 
@@ -46,7 +38,15 @@ npm install
 npm run start:dev
 ```
 
-를 입력한후 [http://localhost:3000/](http://localhost:3000/)에 접속한다
+을 터미널에 입력한다 그리고 [http://localhost:3000/](http://localhost:3000/)에 접속한다
+이후부터는 라이브 서버같이 저장한후 새로고침하면 바로 적용된다
+(이보다 편한방법을 알고 계시다면 알려주시기 바랍니다)
+
+종료할때는 ctrl + c를 터미널에 입력해주시기 바랍니다
+
+## 개발 방법
+
+html파일을 live server로 켜서 작업해도 무방합니다
 
 ## 진행 상황
 
@@ -57,6 +57,8 @@ v.0.0.1 - 초기상태 입니다.
 -   **국재윤** - _Initial work_ - [msg2324](https://github.com/igiza1213)
 
 또한 여기서 [협업자들](https://github.com/SRH-doit) 을 보실수 있습니다!
+
+(작업후 직접 추가하시면 됩니다)
 
 ## 각주
 
