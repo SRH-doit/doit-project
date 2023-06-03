@@ -3,7 +3,7 @@
 이 프로젝트는 doit! 교육중 진행된 프로젝트로 여러명이 모여 브레임 스토밍 사이트를 만들어 보는 프로젝트 입니다.
 
 ## 기본 디렉토리 구조
-
+```
 📦doit-project
 ┣ 📂pages - html 파일을 담는 폴더
 ┃ ┣ 📜404.html - 404 Not Found 일때 보여줄 html
@@ -22,6 +22,7 @@
 ┣ 📜package-lock.json - npm 다운 파일을 상세 명시
 ┣ 📜package.json - npm 다운 파일과 실행 script, 상세 내용등을 명시
 ┗ 📜README.md - github README 파일
+```
 
 ## 실행 방법
 
