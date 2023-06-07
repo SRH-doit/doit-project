@@ -56,13 +56,16 @@ npm run start:dev
 
 ## Atlas
 
-'''
 MONGO_URL = mongodb+srv://Admin:PaRRseqABOcfNMv8@cluster0.4boiy3r.mongodb.net/doitDB?retryWrites=true&w=majority
+<br>
 Atlas_id = "driveonly235@gmail.com"
+<br>
 Atlas_pw = "dbswornR1234"
+<br>
 DB_name = "doitDB"
+<br>
 collection_name = "usertbl"
-'''
+<br>
 
 ## 진행 상황
 
