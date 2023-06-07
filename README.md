@@ -53,7 +53,7 @@ npm run start:dev
 
 2. 백엔드: feature-back 브랜치에 들어가서 app.js 파일에서 개발한다. 작업이 끝난후 커밋과 푸쉬를 하고, 총 책임자(국재윤, 정현서)에게 자신이 한 작업을 설명 후 develop 브랜치에 pull request후 merge를 한다. merge를 하던중 conflict이 나면 merge를 멈추고 작업했던 모든 파일을 자신의 로컬에 저장후 총 책임자(국재윤, 정현서)를 호출한다.
 
-3. 데브옵스: feature-devops 브랜치에 들어가서 BackEnd폴더를 활용하여 개발한다. 작업이 끝난후 커밋과 푸쉬를 하고, 총 책임자(국재윤, 정현서)에게 자신이 한 작업을 설명 후 develop 브랜치에 pull request후 merge를 한다. merge를 하던중 conflict이 나면 merge를 멈추고 작업했던 모든 파일을 자신의 로컬에 저장후 총 책임자(국재윤, 정현서)를 호출한다.
+3. 데브옵스: feature-devops 브랜치에 들어가서 개발한다. 작업이 끝난후 커밋과 푸쉬를 하고, 총 책임자(국재윤, 정현서)에게 자신이 한 작업을 설명 후 develop 브랜치에 pull request후 merge를 한다. merge를 하던중 conflict이 나면 merge를 멈추고 작업했던 모든 파일을 자신의 로컬에 저장후 총 책임자(국재윤, 정현서)를 호출한다.
 
 ## 진행 상황
 
