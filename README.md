@@ -56,7 +56,7 @@ npm run start:dev
 
 ## Atlas
 
-MONGO_URL = mongodb+srv://Admin:PaRRseqABOcfNMv8@cluster0.4boiy3r.mongodb.net/doitDB?retryWrites=true&w=majority
+MONGO_URL = mongodb+srv://admin:PaRRseqABOcfNMv8@cluster0.4boiy3r.mongodb.net/doitDB?retryWrites=true&w=majority
 <br>
 Atlas_id = "driveonly235@gmail.com"
 <br>
