@@ -17,8 +17,9 @@
 ┃ ┃ ┃ ┗ 📜Home.css - Home 페이지의 css
 ┃ ┃ ┣ 📜reset.css - 기본 reset css
 ┃ ┃ ┗ 📜style.css - 모든 css 파일을 규합하는 css
+┣ 📂BackEnd - 백엔드 개발시 필요한 파일들을 담는 폴더
+┃ ┣ 📜app.js - express 파일
 ┣ 📜.gitignore - github에 올라가지 않을 파일을 명시
-┣ 📜app.js - express 파일
 ┣ 📜nodemon.json - nodemon 설정을 명시
 ┣ 📜package-lock.json - npm 다운 파일을 상세 명시
 ┣ 📜package.json - npm 다운 파일과 실행 script, 상세 내용등을 명시
@@ -48,7 +49,11 @@ npm run start:dev
 
 ## 개발 방법
 
-html파일을 live server로 켜서 작업해도 무방합니다
+1. 프론트엔드: feature-front 브랜치에 들어가서 pages와 public폴더를 활용하여 개발한다. 작업이 끝난후 커밋과 푸쉬를 하고, 총 책임자(국재윤, 정현서)에게 자신이 한 작업을 설명 후 develop 브랜치에 pull request후 merge를 한다. merge를 하던중 conflict이 나면 merge를 멈추고 작업했던 모든 파일을 자신의 로컬에 저장후 총 책임자(국재윤, 정현서)를 호출한다.
+
+2. 백엔드: feature-back 브랜치에 들어가서 BackEnd폴더를 활용하여 개발한다. 작업이 끝난후 커밋과 푸쉬를 하고, 총 책임자(국재윤, 정현서)에게 자신이 한 작업을 설명 후 develop 브랜치에 pull request후 merge를 한다. merge를 하던중 conflict이 나면 merge를 멈추고 작업했던 모든 파일을 자신의 로컬에 저장후 총 책임자(국재윤, 정현서)를 호출한다.
+
+3. 데브옵스: feature-devops 브랜치에 들어가서 BackEnd폴더를 활용하여 개발한다. 작업이 끝난후 커밋과 푸쉬를 하고, 총 책임자(국재윤, 정현서)에게 자신이 한 작업을 설명 후 develop 브랜치에 pull request후 merge를 한다. merge를 하던중 conflict이 나면 merge를 멈추고 작업했던 모든 파일을 자신의 로컬에 저장후 총 책임자(국재윤, 정현서)를 호출한다.
 
 ## 진행 상황
 
@@ -56,7 +61,8 @@ v.0.0.1 - 초기상태 입니다.
 
 ## 참여자
 
--   **국재윤** - _Initial work_ - [msg2324](https://github.com/igiza1213)
+- **국재윤** - _Initial work_ - [msg2324](https://github.com/igiza1213)
+- **정현서** - _Back-End and DevOps work_ - [정삼복](https://github.com/NANONANDFLASH)
 
 또한 여기서 [협업자들](https://github.com/SRH-doit) 을 보실수 있습니다!
 
@@ -66,6 +72,9 @@ v.0.0.1 - 초기상태 입니다.
 
 귀찮아서 템플릿 가져다 쓰고 대충 만들었으니 수정하실분은 부디 수정해주시기 바랍니다.
 필자는 이런거 아무것도 몰라요 -**국재윤**
+
+윗사람이 만들어놓은거에 숫가락 엄청 올리고 갑니다.
+맛집이네요!! --**정현서**
 
 <!-- These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system. -->
 
