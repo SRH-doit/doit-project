@@ -74,7 +74,7 @@ v.0.0.1 - 초기상태 입니다.
 필자는 이런거 아무것도 몰라요 -**국재윤**
 
 윗사람이 만들어놓은거에 숫가락 엄청 올리고 갑니다.
-맛집이네요!! --**정현서**
+맛집이네요!! -**정현서**
 
 <!-- These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system. -->
 
