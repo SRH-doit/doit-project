@@ -55,7 +55,9 @@ npm run start:dev
 
 3. 데브옵스: feature-devops 브랜치에 들어가서 BackEnd폴더를 활용하여 개발한다. 작업이 끝난후 커밋과 푸쉬를 하고, 총 책임자(국재윤, 정현서)에게 자신이 한 작업을 설명 후 develop 브랜치에 pull request후 merge를 한다. merge를 하던중 conflict이 나면 merge를 멈추고 작업했던 모든 파일을 자신의 로컬에 저장후 총 책임자(국재윤, 정현서)를 호출한다.
 
-## Atlas
+## env
+
+doit 폴더에 .env라는 파일을 만들고 안에 내용을 넣는다
 
 '''
 MONGO_URL = mongodb+srv://Admin:PaRRseqABOcfNMv8@cluster0.4boiy3r.mongodb.net/doitDB?retryWrites=true&w=majority
@@ -71,8 +73,8 @@ v.0.0.1 - 초기상태 입니다.
 
 ## 참여자
 
-- **국재윤** - _Initial work_ - [msg2324](https://github.com/igiza1213)
-- **정현서** - _Back-End and DevOps work_ - [정삼복](https://github.com/NANONANDFLASH)
+-   **국재윤** - _Initial work_ - [msg2324](https://github.com/igiza1213)
+-   **정현서** - _Back-End and DevOps work_ - [정삼복](https://github.com/NANONANDFLASH)
 
 또한 여기서 [협업자들](https://github.com/SRH-doit) 을 보실수 있습니다!
 
