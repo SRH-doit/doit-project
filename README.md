@@ -58,6 +58,7 @@ npm run start:dev
 ## 진행 상황
 
 v.0.0.1 - 초기상태 입니다.
+v.0.1.0 - express와 mongoDB를 연결하였습니다.
 
 ## 참여자
 
