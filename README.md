@@ -55,6 +55,7 @@ npm run start:dev
 3. 데브옵스: feature-devops 브랜치에 들어가서 개발한다. 작업이 끝난후 커밋과 푸쉬를 하고, 총 책임자(국재윤, 정현서)에게 자신이 한 작업을 설명 후 develop 브랜치에 pull request후 merge를 한다. merge를 하던중 conflict이 나면 merge를 멈추고 작업했던 모든 파일을 자신의 로컬에 저장후 총 책임자(국재윤, 정현서)를 호출한다.
 
 ## atlas
+
 ```Dotenv
 MONGO_URL = mongodb+srv://admin:PaRRseqABOcfNMv8@cluster0.4boiy3r.mongodb.net/doitDB?retryWrites=true&w=majority
 Atlas_id = "driveonly235@gmail.com"
@@ -66,6 +67,7 @@ collection_name = "usertbl"
 ## 진행 상황
 
 v.0.0.1 - 초기상태 입니다.
+v.0.0.2 - README.md 제작과 기초 구조 설정을 끝냈습니다.
 <br>
 v.0.1.0 - express와 mongoDB를 연결하였습니다.
 
