@@ -56,17 +56,22 @@ npm run start:dev
 
 ## atlas
 
-'''
-MONGO_URL = mongodb+srv://Admin:PaRRseqABOcfNMv8@cluster0.4boiy3r.mongodb.net/doitDB?retryWrites=true&w=majority
+MONGO_URL = mongodb+srv://admin:PaRRseqABOcfNMv8@cluster0.4boiy3r.mongodb.net/doitDB?retryWrites=true&w=majority
+<br>
 Atlas_id = "driveonly235@gmail.com"
+<br>
 Atlas_pw = "dbswornR1234"
+<br>
 DB_name = "doitDB"
+<br>
 collection_name = "usertbl"
-'''
+<br>
 
 ## 진행 상황
 
 v.0.0.1 - 초기상태 입니다.
+<br>
+v.0.1.0 - express와 mongoDB를 연결하였습니다.
 
 ## 참여자
 
