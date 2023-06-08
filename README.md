@@ -29,14 +29,14 @@
 
 pull을 받은다음
 
-```zsh
+```console
 npm install
 ```
 
 을 터미널에 입력한다 - npm 파일을 다운로드
 이후
 
-```zsh
+```console
 npm run start:dev
 ```
 
@@ -55,17 +55,13 @@ npm run start:dev
 3. 데브옵스: feature-devops 브랜치에 들어가서 개발한다. 작업이 끝난후 커밋과 푸쉬를 하고, 총 책임자(국재윤, 정현서)에게 자신이 한 작업을 설명 후 develop 브랜치에 pull request후 merge를 한다. merge를 하던중 conflict이 나면 merge를 멈추고 작업했던 모든 파일을 자신의 로컬에 저장후 총 책임자(국재윤, 정현서)를 호출한다.
 
 ## atlas
-
+```Dotenv
 MONGO_URL = mongodb+srv://admin:PaRRseqABOcfNMv8@cluster0.4boiy3r.mongodb.net/doitDB?retryWrites=true&w=majority
-<br>
 Atlas_id = "driveonly235@gmail.com"
-<br>
 Atlas_pw = "dbswornR1234"
-<br>
 DB_name = "doitDB"
-<br>
 collection_name = "usertbl"
-<br>
+```
 
 ## 진행 상황
 
