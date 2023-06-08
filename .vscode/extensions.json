@@ -1,0 +1,17 @@
+{
+    "recommendations": [
+        "pkief.material-icon-theme",
+        "akamud.vscode-theme-onedark",
+        "dzhavat.css-initial-value",
+        "pranaygp.vscode-css-peek",
+        "usernamehw.errorlens",
+        "ecmel.vscode-html-css",
+        "anteprimorac.html-end-tag-labels",
+        "solnurkarim.html-to-css-autocompletion",
+        "zignd.html-css-class-completion",
+        "ritwickdey.liveserver",
+        "christian-kohler.path-intellisense",
+        "esbenp.prettier-vscode",
+        "tabnine.tabnine-vscode"
+    ]
+}
