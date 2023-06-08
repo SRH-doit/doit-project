@@ -18,7 +18,6 @@
 ┃ ┃ ┣ 📜reset.css - 기본 reset css
 ┃ ┃ ┗ 📜style.css - 모든 css 파일을 규합하는 css
 ┣ 📜app.js - express 파일
-┣ 📜.env - 환경 변수를 설정하기 위한 파일
 ┣ 📜.gitignore - github에 올라가지 않을 파일을 명시
 ┣ 📜nodemon.json - nodemon 설정을 명시
 ┣ 📜package-lock.json - npm 다운 파일을 상세 명시
@@ -30,14 +29,14 @@
 
 pull을 받은다음
 
-```
+```zsh
 npm install
 ```
 
 을 터미널에 입력한다 - npm 파일을 다운로드
 이후
 
-```
+```zsh
 npm run start:dev
 ```
 
@@ -77,6 +76,38 @@ v.0.0.1 - 초기상태 입니다.
 또한 여기서 [협업자들](https://github.com/SRH-doit) 을 보실수 있습니다!
 
 (작업후 직접 추가하시면 됩니다)
+
+## recommended extensions
+
+작성자의 개인취향이 들어가있다
+theme : [Atom One Dark Theme](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark)
+icon : [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+formatter : [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+적용법: VSC 설정에 들어간후 우상단 실행 아이콘 오른쪽 아이콘을 눌러 settings.json를 들어간후 빈공간에
+
+```json
+"editor.formatOnSave": true,
+"editor.defaultFormatter": "esbenp.prettier-vscode",
+"prettier.tabWidth": 4,
+"workbench.iconTheme": "material-icon-theme",
+"workbench.colorTheme": "Atom One Dark",
+"terminal.integrated.defaultProfile.windows": "Git Bash",
+"explorer.compactFolders": false,
+"editor.tokenColorCustomizations": {
+        "comments": "#d39e9e"
+    },
+```
+
+첫번째 줄은 저장시 자동정렬할지를 설정하는 문구다
+두번째 줄은 기본 포멧터를 prettier로 설정하는 문구이다
+세번째 줄은 prettier 정렬 단위(tap 단위)를 4만큼 정하는 구문이다
+네번째 줄은 icon을 meterial icon으로 하는 문구이다
+다섯째 줄은 theme를 atom 테마로 하는 문구이다
+여섯째 줄은 기본 터미널을 git bash로 정하는 문구이다
+일곱째 줄은 컴팩트 방식의 폴더정렬을 취소하는 문구이다
+여덟째 줄은 주석 색을 바꾸는 문구이다
+
+를 붙여 넣기한다 이중 필요없다 생각되는 문구는 지워도 무방하다
 
 ## 각주
 
