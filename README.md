@@ -27,6 +27,8 @@
 
 ## 실행 방법
 
+node.js 설치 검색해서 현재버전 설치한다 설치창에서 무지성 확인 누르면 된다.
+
 pull을 받은다음
 
 ```console
@@ -47,6 +49,8 @@ npm run start:dev
 종료할때는 ctrl + c를 터미널에 입력해주시기 바랍니다
 
 ## 개발 방법
+
+**모르겠다면 국재윤을 불러주세요**
 
 1. 프론트엔드: feature-front 브랜치에 들어가서 pages와 public폴더를 활용하여 개발한다. 작업이 끝난후 커밋과 푸쉬를 하고, 총 책임자(국재윤, 정현서)에게 자신이 한 작업을 설명 후 develop 브랜치에 pull request후 merge를 한다. merge를 하던중 conflict이 나면 merge를 멈추고 작업했던 모든 파일을 자신의 로컬에 저장후 총 책임자(국재윤, 정현서)를 호출한다.
 
@@ -112,6 +116,28 @@ formatter : [Prettier - Code formatter](https://marketplace.visualstudio.com/ite
 
 를 붙여 넣기한다 이중 필요없다 생각되는 문구는 지워도 무방하다
 
+나머지는 여기있다
+
+```json
+{
+    "recommendations": [
+        "pkief.material-icon-theme",
+        "akamud.vscode-theme-onedark",
+        "dzhavat.css-initial-value",
+        "pranaygp.vscode-css-peek",
+        "usernamehw.errorlens",
+        "ecmel.vscode-html-css",
+        "anteprimorac.html-end-tag-labels",
+        "solnurkarim.html-to-css-autocompletion",
+        "zignd.html-css-class-completion",
+        "ritwickdey.liveserver",
+        "christian-kohler.path-intellisense",
+        "esbenp.prettier-vscode",
+        "tabnine.tabnine-vscode"
+    ]
+}
+```
+
 ## 각주
 
 귀찮아서 템플릿 가져다 쓰고 대충 만들었으니 수정하실분은 부디 수정해주시기 바랍니다.
@@ -126,8 +152,10 @@ formatter : [Prettier - Code formatter](https://marketplace.visualstudio.com/ite
 
 What things you need to install the software and how to install them
 
-```
+````
+
 Give examples
+
 ```
 
 ### Installing
@@ -137,13 +165,17 @@ A step by step series of examples that tell you how to get a development env run
 Say what the step will be
 
 ```
+
 Give the example
+
 ```
 
 And repeat
 
 ```
+
 until finished
+
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
@@ -157,7 +189,9 @@ Explain how to run the automated tests for this system
 Explain what these tests test and why
 
 ```
+
 Give an example
+
 ```
 
 ### And coding style tests
@@ -165,8 +199,10 @@ Give an example
 Explain what these tests test and why
 
 ```
+
 Give an example
-``` -->
+
+```-->
 
 <!-- ## Deployment
 
@@ -185,3 +221,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).  -->
+
+```
+
+```
