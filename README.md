@@ -6,23 +6,36 @@
 
 ```
 📦doit-project
-┣ 📂pages - html 파일을 담는 폴더
-┃ ┣ 📜404.html - 404 Not Found 일때 보여줄 html
-┃ ┗ 📜index.html - Home 페이지
-┣ 📂public - css, javascript 등의 파일을 담을 폴더(express의 정적 파일 제공)
-┃ ┣ 📂javascripts - 자바스크립트 파일을 담는 폴터
-┃ ┣ 📂styles - css 파일을 담는 폴더
-┃ ┃ ┣ 📂components - components 의 css를 담는 폴더
-┃ ┃ ┣ 📂screens - screens 단위로 css를 담는 폴더
-┃ ┃ ┃ ┗ 📜Home.css - Home 페이지의 css
-┃ ┃ ┣ 📜reset.css - 기본 reset css
-┃ ┃ ┗ 📜style.css - 모든 css 파일을 규합하는 css
-┣ 📜app.js - express 파일
-┣ 📜.gitignore - github에 올라가지 않을 파일을 명시
-┣ 📜nodemon.json - nodemon 설정을 명시
-┣ 📜package-lock.json - npm 다운 파일을 상세 명시
-┣ 📜package.json - npm 다운 파일과 실행 script, 상세 내용등을 명시
-┗ 📜README.md - github README 파일
+ ┣ 📂public - html, css, javascript 등의 파일을 담을 폴더(express의 정적 파일 제공)
+ ┃ ┣ 📂pages - html 파일을 담는 폴더
+ ┃ ┃ ┣ 📂auth - login 관련 html
+ ┃ ┃ ┃ ┣ 📜login.html
+ ┃ ┃ ┃ ┗ 📜signup.html
+ ┃ ┃ ┣ 📂game - game 관련 html
+ ┃ ┃ ┃ ┣ 📜dice.html
+ ┃ ┃ ┃ ┗ 📜seossda.html
+ ┃ ┃ ┣ 📂post  글 관련 html
+ ┃ ┃ ┃ ┣ 📜list.html
+ ┃ ┃ ┃ ┗ 📜write.html
+ ┃ ┃ ┣ 📜404.html - 404 Not Found 일때 보여줄 html
+ ┃ ┃ ┗ 📜index.html - Home 페이지
+ ┃ ┣ 📂javascripts - 자바스크립트 파일을 담는 폴터
+ ┃ ┣ 📂styles - css 파일을 담는 폴더
+ ┃ ┃ ┣ 📂components - components 의 css를 담는 폴더
+ ┃ ┃ ┣ 📂screens - screens 단위로 css를 담는 폴더
+ ┃ ┃ ┃ ┗ 📜Home.css - Home 페이지의 css
+ ┃ ┃ ┣ 📜reset.css - 기본 reset css
+ ┃ ┃ ┗ 📜style.css - 모든 css 파일을 규합하는 css
+ ┣ 📂routes - routing 분할
+ ┃ ┣ 📜auth.js - auth 폴더의 라우팅에 대해 규정
+ ┃ ┣ 📜game.js - game 폴더의 라우팅에 대해 규정
+ ┃ ┗ 📜post.js - post 폴더의 라우팅에 대해 규정
+ ┣ 📜app.js - express 파일
+ ┣ 📜.gitignore - github에 올라가지 않을 파일을 명시
+ ┣ 📜nodemon.json - nodemon 설정을 명시
+ ┣ 📜package-lock.json - npm 다운 파일을 상세 명시
+ ┣ 📜package.json - npm 다운 파일과 실행 script, 상세 내용등을 명시
+ ┗ 📜README.md - github README 파일
 ```
 
 ## 실행 방법
@@ -71,9 +84,6 @@ collection_name = "usertbl"
 ## 진행 상황
 
 v.0.0.1 - 초기상태 입니다.
-v.0.0.2 - README.md 제작과 기초 구조 설정을 끝냈습니다.
-<br>
-v.0.1.0 - express와 mongoDB를 연결하였습니다.
 
 ## 참여자
 
