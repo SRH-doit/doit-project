@@ -27,6 +27,12 @@ app.get((req, res) => {
 const auth = require("./routes/auth");
 app.use("/auth", auth);
 
+const game = require("./routes/game");
+app.use("/game", game);
+
+const post = require("./routes/post");
+app.use("/post", post);
+
 app.listen(port, (err) => {
     if (err) return console.log(err);
     console.log(`Doit project is listening on port ${port}`);
