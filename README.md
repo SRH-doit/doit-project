@@ -84,6 +84,10 @@ collection_name = "usertbl"
 ## 진행 상황
 
 v.0.0.1 - 초기상태 입니다.
+v.0.0.2 - README.md 제작과 기초 구조 설정을 끝냈습니다.
+<br>
+v.0.1.0 - express와 mongoDB를 연결하였습니다.
+v.0.1.1 - routing을 분리 했습니다.
 
 ## 참여자
 
