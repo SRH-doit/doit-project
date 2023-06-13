@@ -18,7 +18,6 @@
 ┃ ┃ ┣ 📜reset.css - 기본 reset css
 ┃ ┃ ┗ 📜style.css - 모든 css 파일을 규합하는 css
 ┣ 📜app.js - express 파일
-┣ 📜.env - 환경 변수를 설정하기 위한 파일
 ┣ 📜.gitignore - github에 올라가지 않을 파일을 명시
 ┣ 📜nodemon.json - nodemon 설정을 명시
 ┣ 📜package-lock.json - npm 다운 파일을 상세 명시
@@ -28,16 +27,18 @@
 
 ## 실행 방법
 
+node.js 설치 검색해서 현재버전 설치한다 설치창에서 무지성 확인 누르면 된다.
+
 pull을 받은다음
 
-```
+```console
 npm install
 ```
 
 을 터미널에 입력한다 - npm 파일을 다운로드
 이후
 
-```
+```console
 npm run start:dev
 ```
 
@@ -49,24 +50,93 @@ npm run start:dev
 
 ## 개발 방법
 
+**모르겠다면 국재윤을 불러주세요**
+
 1. 프론트엔드: feature-front 브랜치에 들어가서 pages와 public폴더를 활용하여 개발한다. 작업이 끝난후 커밋과 푸쉬를 하고, 총 책임자(국재윤, 정현서)에게 자신이 한 작업을 설명 후 develop 브랜치에 pull request후 merge를 한다. merge를 하던중 conflict이 나면 merge를 멈추고 작업했던 모든 파일을 자신의 로컬에 저장후 총 책임자(국재윤, 정현서)를 호출한다.
 
 2. 백엔드: feature-back 브랜치에 들어가서 app.js 파일에서 개발한다. 작업이 끝난후 커밋과 푸쉬를 하고, 총 책임자(국재윤, 정현서)에게 자신이 한 작업을 설명 후 develop 브랜치에 pull request후 merge를 한다. merge를 하던중 conflict이 나면 merge를 멈추고 작업했던 모든 파일을 자신의 로컬에 저장후 총 책임자(국재윤, 정현서)를 호출한다.
 
-3. 데브옵스: feature-devops 브랜치에 들어가서 BackEnd폴더를 활용하여 개발한다. 작업이 끝난후 커밋과 푸쉬를 하고, 총 책임자(국재윤, 정현서)에게 자신이 한 작업을 설명 후 develop 브랜치에 pull request후 merge를 한다. merge를 하던중 conflict이 나면 merge를 멈추고 작업했던 모든 파일을 자신의 로컬에 저장후 총 책임자(국재윤, 정현서)를 호출한다.
+3. 데브옵스: feature-devops 브랜치에 들어가서 개발한다. 작업이 끝난후 커밋과 푸쉬를 하고, 총 책임자(국재윤, 정현서)에게 자신이 한 작업을 설명 후 develop 브랜치에 pull request후 merge를 한다. merge를 하던중 conflict이 나면 merge를 멈추고 작업했던 모든 파일을 자신의 로컬에 저장후 총 책임자(국재윤, 정현서)를 호출한다.
+
+## atlas
+
+```Dotenv
+MONGO_URL = mongodb+srv://admin:PaRRseqABOcfNMv8@cluster0.4boiy3r.mongodb.net/doitDB?retryWrites=true&w=majority
+Atlas_id = "driveonly235@gmail.com"
+Atlas_pw = "dbswornR1234"
+DB_name = "doitDB"
+collection_name = "usertbl"
+```
 
 ## 진행 상황
 
 v.0.0.1 - 초기상태 입니다.
+v.0.0.2 - README.md 제작과 기초 구조 설정을 끝냈습니다.
+<br>
+v.0.1.0 - express와 mongoDB를 연결하였습니다.
 
 ## 참여자
 
-- **국재윤** - _Initial work_ - [msg2324](https://github.com/igiza1213)
-- **정현서** - _Back-End and DevOps work_ - [정삼복](https://github.com/NANONANDFLASH)
+-   **국재윤** - _Initial work_ - [msg2324](https://github.com/igiza1213)
+-   **정현서** - _Back-End and DevOps work_ - [정삼복](https://github.com/NANONANDFLASH)
 
 또한 여기서 [협업자들](https://github.com/SRH-doit) 을 보실수 있습니다!
 
 (작업후 직접 추가하시면 됩니다)
+
+## recommended extensions
+
+작성자의 개인취향이 들어가있다
+theme : [Atom One Dark Theme](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark)
+icon : [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+formatter : [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+적용법: VSC 설정에 들어간후 우상단 실행 아이콘 오른쪽 아이콘을 눌러 settings.json를 들어간후 빈공간에
+
+```json
+"editor.formatOnSave": true,
+"editor.defaultFormatter": "esbenp.prettier-vscode",
+"prettier.tabWidth": 4,
+"workbench.iconTheme": "material-icon-theme",
+"workbench.colorTheme": "Atom One Dark",
+"terminal.integrated.defaultProfile.windows": "Git Bash",
+"explorer.compactFolders": false,
+"editor.tokenColorCustomizations": {
+        "comments": "#d39e9e"
+    },
+```
+
+첫번째 줄은 저장시 자동정렬할지를 설정하는 문구다
+두번째 줄은 기본 포멧터를 prettier로 설정하는 문구이다
+세번째 줄은 prettier 정렬 단위(tap 단위)를 4만큼 정하는 구문이다
+네번째 줄은 icon을 meterial icon으로 하는 문구이다
+다섯째 줄은 theme를 atom 테마로 하는 문구이다
+여섯째 줄은 기본 터미널을 git bash로 정하는 문구이다
+일곱째 줄은 컴팩트 방식의 폴더정렬을 취소하는 문구이다
+여덟째 줄은 주석 색을 바꾸는 문구이다
+
+를 붙여 넣기한다 이중 필요없다 생각되는 문구는 지워도 무방하다
+
+나머지는 여기있다
+
+```json
+{
+    "recommendations": [
+        "pkief.material-icon-theme",
+        "akamud.vscode-theme-onedark",
+        "dzhavat.css-initial-value",
+        "pranaygp.vscode-css-peek",
+        "usernamehw.errorlens",
+        "ecmel.vscode-html-css",
+        "anteprimorac.html-end-tag-labels",
+        "solnurkarim.html-to-css-autocompletion",
+        "zignd.html-css-class-completion",
+        "ritwickdey.liveserver",
+        "christian-kohler.path-intellisense",
+        "esbenp.prettier-vscode",
+        "tabnine.tabnine-vscode"
+    ]
+}
+```
 
 ## 각주
 
@@ -82,8 +152,10 @@ v.0.0.1 - 초기상태 입니다.
 
 What things you need to install the software and how to install them
 
-```
+````
+
 Give examples
+
 ```
 
 ### Installing
@@ -93,13 +165,17 @@ A step by step series of examples that tell you how to get a development env run
 Say what the step will be
 
 ```
+
 Give the example
+
 ```
 
 And repeat
 
 ```
+
 until finished
+
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
@@ -113,7 +189,9 @@ Explain how to run the automated tests for this system
 Explain what these tests test and why
 
 ```
+
 Give an example
+
 ```
 
 ### And coding style tests
@@ -121,8 +199,10 @@ Give an example
 Explain what these tests test and why
 
 ```
+
 Give an example
-``` -->
+
+```-->
 
 <!-- ## Deployment
 
@@ -141,3 +221,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).  -->
+
+```
+
+```
