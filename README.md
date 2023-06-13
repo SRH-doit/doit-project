@@ -65,11 +65,9 @@ npm run start:dev
 
 **모르겠다면 국재윤을 불러주세요**
 
-1. 프론트엔드: feature-front 브랜치에 들어가서 pages와 public폴더를 활용하여 개발한다. 작업이 끝난후 커밋과 푸쉬를 하고, 총 책임자(국재윤, 정현서)에게 자신이 한 작업을 설명 후 develop 브랜치에 pull request후 merge를 한다. merge를 하던중 conflict이 나면 merge를 멈추고 작업했던 모든 파일을 자신의 로컬에 저장후 총 책임자(국재윤, 정현서)를 호출한다.
-
-2. 백엔드: feature-back 브랜치에 들어가서 app.js 파일에서 개발한다. 작업이 끝난후 커밋과 푸쉬를 하고, 총 책임자(국재윤, 정현서)에게 자신이 한 작업을 설명 후 develop 브랜치에 pull request후 merge를 한다. merge를 하던중 conflict이 나면 merge를 멈추고 작업했던 모든 파일을 자신의 로컬에 저장후 총 책임자(국재윤, 정현서)를 호출한다.
-
-3. 데브옵스: feature-devops 브랜치에 들어가서 개발한다. 작업이 끝난후 커밋과 푸쉬를 하고, 총 책임자(국재윤, 정현서)에게 자신이 한 작업을 설명 후 develop 브랜치에 pull request후 merge를 한다. merge를 하던중 conflict이 나면 merge를 멈추고 작업했던 모든 파일을 자신의 로컬에 저장후 총 책임자(국재윤, 정현서)를 호출한다.
+public/pages 폴더에 html들이 들어있다. 각 폴더 안에 세부분류가 더있다.
+public/styles/screens 폴더에 css를 작성한다
+public/javascripts 폴더에 js가 있다.
 
 ## atlas
 
