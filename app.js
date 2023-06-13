@@ -14,24 +14,23 @@ mongoose
         console.error("Error connecting to MongoDB Atlas:", err);
     });
 
-app.use("/public", express.static("public"));
+// app.use("/public", express.static("public"));
 
-app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/public/pages/index.html");
-});
+const topic = require("./routes/topic/topic");
+app.use("/", topic);
 
-app.get((req, res) => {
-    res.sendFile(__dirname + "/public/pages/404.html");
-});
-
-const auth = require("./routes/auth");
+const auth = require("./routes/auth/auth");
 app.use("/auth", auth);
 
-const game = require("./routes/game");
+const game = require("./routes/game/game");
 app.use("/game", game);
 
-const post = require("./routes/post");
+const post = require("./routes/post/post");
 app.use("/post", post);
+
+app.use((req, res, next) => {
+    res.status("404").send("<h1>Page not found</h1>");
+});
 
 app.listen(port, (err) => {
     if (err) return console.log(err);
