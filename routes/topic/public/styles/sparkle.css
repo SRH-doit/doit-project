@@ -1,0 +1,40 @@
+.star {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: sparkle 1s linear;
+}
+
+@keyframes sparkle {
+    0% {
+        box-shadow: 0 0 6px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000,
+            0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000,
+            0 0 70px #ff0000;
+    }
+    20% {
+        box-shadow: 0 0 6px #ff6600, 0 0 20px #ff6600, 0 0 30px #ff6600,
+            0 0 40px #ff6600, 0 0 50px #ff6600, 0 0 60px #ff6600,
+            0 0 70px #ff6600;
+    }
+    40% {
+        box-shadow: 0 0 6px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00,
+            0 0 40px #ffcc00, 0 0 50px #ffcc00, 0 0 60px #ffcc00,
+            0 0 70px #ffcc00;
+    }
+    60% {
+        box-shadow: 0 0 6px #33cc00, 0 0 20px #33cc00, 0 0 30px #33cc00,
+            0 0 40px #33cc00, 0 0 50px #33cc00, 0 0 60px #33cc00,
+            0 0 70px #33cc00;
+    }
+    80% {
+        box-shadow: 0 0 6px #0099ff, 0 0 20px #0099ff, 0 0 30px #0099ff,
+            0 0 40px #0099ff, 0 0 50px #0099ff, 0 0 60px #0099ff,
+            0 0 70px #0099ff;
+    }
+    100% {
+        box-shadow: 0 0 6px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff,
+            0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff,
+            0 0 70px #ff00ff;
+    }
+}

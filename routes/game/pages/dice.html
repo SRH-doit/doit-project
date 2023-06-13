@@ -1,78 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>주사위 프로그램</title>
-  <style>
-    .dice-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    .dice {
-      width: 80px;
-      height: 80px;
-      margin: 10px;
-      border: 1px solid black;
-      border-radius: 20%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .sum {
-      font-size: 36px;
-      font-weight: bold;
-      text-align: center;
-      margin-top: 20px;
-    }
-  </style>
-</head>
-<body>
-  <label for="dice-count">주사위 개수:</label>
-  <input type="number" id="dice-count" min="1" max="100">
-  <button id="roll-button">주사위 던지기</button>
-
-  <div class="dice-container" id="dice-results"></div>
-  <div class="sum" id="sum-result"></div>
-
-  <script>
-    function rollDice() {
-      const diceCountInput = document.querySelector('#dice-count');
-      const diceCount = parseInt(diceCountInput.value, 10);
-
-      // 이전 주사위 결과 및 합 삭제
-      const diceResultsDiv = document.querySelector('#dice-results');
-      diceResultsDiv.innerHTML = '';
-      const sumResultDiv = document.querySelector('#sum-result');
-      sumResultDiv.textContent = '';
-
-      let sum = 0;
-      for (let i = 0; i < diceCount; i++) {
-        const min = 1;
-        const max = 6;
-        const diceNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-
-        // 주사위 결과를 출력
-        const diceResultDiv = document.createElement('div');
-        diceResultDiv.classList.add('dice');
-        diceResultDiv.textContent = diceNumber;
-        diceResultsDiv.appendChild(diceResultDiv);
-
-        sum += diceNumber;
-      }
-
-      // 합을 표시
-      const sumText = document.createElement('p');
-      sumText.textContent = '주사위 합: ' + sum;
-      sumResultDiv.appendChild(sumText);
-    }
-
-    const rollButton = document.querySelector('#roll-button');
-    rollButton.addEventListener('click', rollDice);
-  </script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="styles/dice.css" />
+        <title>주사위 프로그램</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <a href="/">home</a>
+            <a href="/post/list">list</a>
+            <a href="/auth/login">object</a>
+            <a href="/game/dice">mongo</a>
+        </nav>
+        <label for="dice-count">주사위 개수:</label>
+        <input type="number" id="dice-count" min="1" max="100" />
+        <button id="roll-button">주사위 던지기</button>
+        <div class="dice-container" id="dice-results"></div>
+        <div class="sum" id="sum-result"></div>
+        <script src="javascripts/dice.js"></script>
+    </body>
 </html>
