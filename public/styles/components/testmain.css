@@ -17,9 +17,9 @@ body {
   text-align: center;
 }
 
-.h1 > img {
-  width: 500px;
-  height: 300px;
+.imgbox > img {
+  width: 700px;
+  height: 220px;
 }
 
 .lg-text {
