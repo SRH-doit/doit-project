@@ -14,8 +14,6 @@ mongoose
         console.error("Error connecting to MongoDB Atlas:", err);
     });
 
-// app.use("/public", express.static("public"));
-
 const topic = require("./routes/topic/topic");
 app.use("/", topic);
 

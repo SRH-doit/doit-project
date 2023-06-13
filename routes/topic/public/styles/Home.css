@@ -1,25 +1,54 @@
 @import "reset.css";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: white;
 }
 
-.navbar {
-    position: fixed;
+.wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: RGB(115, 83, 234);
+    text-align: center;
+}
+
+.imgbox > img {
+    width: 700px;
+    height: 220px;
+}
+
+.lg-text {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.sm-text {
+    font-size: 1.5rem;
+}
+
+#dynamic {
+    position: relative;
+    display: inline-block;
+}
+
+#dynamic::after {
+    content: "";
+    display: block;
+    position: absolute;
     top: 0;
-    left: 0;
-    background: grey;
-    height: 70px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    right: -10px;
+    width: 4px;
+    height: 100%;
+    background-color: RGB(115, 83, 234);
 }
 
-.navbar a {
-    text-decoration: none;
+#dynamic.active::after {
+    display: none;
 }
