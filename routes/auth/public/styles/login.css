@@ -1,0 +1,14 @@
+@import "reset.css";
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: grey;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}

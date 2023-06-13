@@ -8,11 +8,17 @@
             href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="styles/ER.css" />
         <link rel="stylesheet" href="styles/OR.css" />
         <title>끝말잇기 게임</title>
     </head>
     <body>
+        <nav class="navbar">
+            <a href="/">home</a>
+            <a href="/post/list">list</a>
+            <a href="/auth/login">login</a>
+            <a href="/game/dice">dice</a>
+            <a href="/game/wordchain">wordchain</a>
+        </nav>
         <div id="warp">
             <!-- title -->
             <h1>Random 끝말잇기 게임</h1>
@@ -48,7 +54,6 @@
             <!-- display word -->
             <div id="displayWord_box"></div>
         </div>
-
         <script src="javascripts/JKL.js"></script>
     </body>
 </html>

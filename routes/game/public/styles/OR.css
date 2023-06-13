@@ -1,20 +1,68 @@
-#warp{
-  width: 80%;
-  margin: 0 auto;
+@import "reset.css";
+
+body {
+    margin: 0;
+    padding: 0;
+    background: blanchedalmond;
+    font-family: "Noto Sans KR", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+span,
+a,
+button,
+input,
+label,
+ul,
+ol,
+li,
+img {
+    padding: 0;
+    margin: 0;
+    line-height: 1.3em;
+    font-size: 16px;
+    font-weight: normal;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: grey;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#warp {
+    width: 80%;
+    margin: 0 auto;
 }
 /* title */
-h1{
+h1 {
     text-align: center;
     color: black;
     font-size: 50px;
     letter-spacing: 5px;
 }
 /* writeWord_box  */
-#writeWord_box{
+#writeWord_box {
     margin: 13px auto;
     text-align: center;
 }
-#word_input{
+#word_input {
     width: 350px;
     height: 100px;
     text-align: center;
@@ -23,34 +71,33 @@ h1{
     border-radius: 3px;
     border: none;
 }
-#word_input::placeholder{
+#word_input::placeholder {
     font-size: 30px;
     text-transform: uppercase;
     font-weight: bold;
 }
 /* playerSet_box */
-#playerSet_box{
+#playerSet_box {
     text-align: center;
-    
 }
-#playInfor{
-  width: 600px;
-  margin: 0 auto;
+#playInfor {
+    width: 600px;
+    margin: 0 auto;
 }
-#playInfor h2{
-  color: rgb(37, 36, 36);
-  font-size: 25px;
+#playInfor h2 {
+    color: rgb(37, 36, 36);
+    font-size: 25px;
     font-weight: bold;
     padding: 20px;
 }
-#playInfor p{ 
-  color: rgb(37, 36, 36);
-  font-weight: 700; 
-  text-align: left;
-  margin-left: 160px;
-  padding: 5px 0;
+#playInfor p {
+    color: rgb(37, 36, 36);
+    font-weight: 700;
+    text-align: left;
+    margin-left: 160px;
+    padding: 5px 0;
 }
-#player_number{
+#player_number {
     width: 30px;
     height: 30px;
     border-radius: 3px;
@@ -58,7 +105,7 @@ h1{
     padding-left: 6px;
     box-sizing: border-box;
 }
-#player_number_btn{
+#player_number_btn {
     background: dodgerblue;
     width: 120px;
     height: 50px;
@@ -69,11 +116,11 @@ h1{
     font-weight: bold;
 }
 /* player_nicknameBox */
-#player_nicknameBox{
+#player_nicknameBox {
     width: 750px;
     margin: 10px auto;
 }
-#player_nicknameBox input{
+#player_nicknameBox input {
     width: 150px;
     height: 30px;
     border: none;
@@ -81,17 +128,17 @@ h1{
     padding-left: 20px;
     box-sizing: border-box;
     margin: 5px 0;
-  font-size: 19px;
+    font-size: 19px;
 }
-#player_nicknameBox span{
+#player_nicknameBox span {
     font-size: 20px;
     padding: 20px 0;
     margin-left: 10px;
     font-weight: 300;
 }
-#player_nicknameBox button{
-  background: rgb(37, 36, 36);
-  color: crimson;
+#player_nicknameBox button {
+    background: rgb(37, 36, 36);
+    color: crimson;
     margin-left: 50px;
     width: 200px;
     height: 50px;
@@ -101,31 +148,31 @@ h1{
     font-weight: bold;
 }
 /* gameTurn_box */
-#gameTurn_box{
-  width: 600px;
-  margin: 0 auto;
-  text-align: center;
+#gameTurn_box {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
 }
 /* gameTurn_box playerList_box */
-#playerList_box{
-  font-size: 19px;
-  font-weight: 550;
-  text-align: center;
+#playerList_box {
+    font-size: 19px;
+    font-weight: 550;
+    text-align: center;
 }
-#playerList_box span{
-  font-size: 19px;
+#playerList_box span {
+    font-size: 19px;
 }
 /* gameTurn_box displayTurn_box */
-#displayTurn_box{
-  font-size: 50px;
-  font-weight: 900;
-  color: rgb(219, 219, 219);
+#displayTurn_box {
+    font-size: 50px;
+    font-weight: 900;
+    color: rgb(219, 219, 219);
 }
 /* displayWord_box */
-#displayWord_box{
-  text-align: center;
-  color: rgb(219, 219, 219);
-  font-weight: bold;
-  font-size: 22px;
-  padding: 30px;
+#displayWord_box {
+    text-align: center;
+    color: rgb(219, 219, 219);
+    font-weight: bold;
+    font-size: 22px;
+    padding: 30px;
 }
