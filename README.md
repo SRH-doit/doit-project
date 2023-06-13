@@ -6,26 +6,41 @@
 
 ```
 📦doit-project
-┣ 📂pages - html 파일을 담는 폴더
-┃ ┣ 📜404.html - 404 Not Found 일때 보여줄 html
-┃ ┗ 📜index.html - Home 페이지
-┣ 📂public - css, javascript 등의 파일을 담을 폴더(express의 정적 파일 제공)
-┃ ┣ 📂javascripts - 자바스크립트 파일을 담는 폴터
-┃ ┣ 📂styles - css 파일을 담는 폴더
-┃ ┃ ┣ 📂components - components 의 css를 담는 폴더
-┃ ┃ ┣ 📂screens - screens 단위로 css를 담는 폴더
-┃ ┃ ┃ ┗ 📜Home.css - Home 페이지의 css
-┃ ┃ ┣ 📜reset.css - 기본 reset css
-┃ ┃ ┗ 📜style.css - 모든 css 파일을 규합하는 css
-┣ 📜app.js - express 파일
-┣ 📜.gitignore - github에 올라가지 않을 파일을 명시
-┣ 📜nodemon.json - nodemon 설정을 명시
-┣ 📜package-lock.json - npm 다운 파일을 상세 명시
-┣ 📜package.json - npm 다운 파일과 실행 script, 상세 내용등을 명시
-┗ 📜README.md - github README 파일
+ ┣ 📂public - html, css, javascript 등의 파일을 담을 폴더(express의 정적 파일 제공)
+ ┃ ┣ 📂pages - html 파일을 담는 폴더
+ ┃ ┃ ┣ 📂auth - login 관련 html
+ ┃ ┃ ┃ ┣ 📜login.html
+ ┃ ┃ ┃ ┗ 📜signup.html
+ ┃ ┃ ┣ 📂game - game 관련 html
+ ┃ ┃ ┃ ┣ 📜dice.html
+ ┃ ┃ ┃ ┗ 📜seossda.html
+ ┃ ┃ ┣ 📂post  글 관련 html
+ ┃ ┃ ┃ ┣ 📜list.html
+ ┃ ┃ ┃ ┗ 📜write.html
+ ┃ ┃ ┣ 📜404.html - 404 Not Found 일때 보여줄 html
+ ┃ ┃ ┗ 📜index.html - Home 페이지
+ ┃ ┣ 📂javascripts - 자바스크립트 파일을 담는 폴터
+ ┃ ┣ 📂styles - css 파일을 담는 폴더
+ ┃ ┃ ┣ 📂components - components 의 css를 담는 폴더
+ ┃ ┃ ┣ 📂screens - screens 단위로 css를 담는 폴더
+ ┃ ┃ ┃ ┗ 📜Home.css - Home 페이지의 css
+ ┃ ┃ ┣ 📜reset.css - 기본 reset css
+ ┃ ┃ ┗ 📜style.css - 모든 css 파일을 규합하는 css
+ ┣ 📂routes - routing 분할
+ ┃ ┣ 📜auth.js - auth 폴더의 라우팅에 대해 규정
+ ┃ ┣ 📜game.js - game 폴더의 라우팅에 대해 규정
+ ┃ ┗ 📜post.js - post 폴더의 라우팅에 대해 규정
+ ┣ 📜app.js - express 파일
+ ┣ 📜.gitignore - github에 올라가지 않을 파일을 명시
+ ┣ 📜nodemon.json - nodemon 설정을 명시
+ ┣ 📜package-lock.json - npm 다운 파일을 상세 명시
+ ┣ 📜package.json - npm 다운 파일과 실행 script, 상세 내용등을 명시
+ ┗ 📜README.md - github README 파일
 ```
 
 ## 실행 방법
+
+node.js 설치 검색해서 현재버전 설치한다 설치창에서 무지성 확인 누르면 된다.
 
 pull을 받은다음
 
@@ -47,6 +62,8 @@ npm run start:dev
 종료할때는 ctrl + c를 터미널에 입력해주시기 바랍니다
 
 ## 개발 방법
+
+**모르겠다면 국재윤을 불러주세요**
 
 1. 프론트엔드: feature-front 브랜치에 들어가서 pages와 public폴더를 활용하여 개발한다. 작업이 끝난후 커밋과 푸쉬를 하고, 총 책임자(국재윤, 정현서)에게 자신이 한 작업을 설명 후 develop 브랜치에 pull request후 merge를 한다. merge를 하던중 conflict이 나면 merge를 멈추고 작업했던 모든 파일을 자신의 로컬에 저장후 총 책임자(국재윤, 정현서)를 호출한다.
 
@@ -70,6 +87,7 @@ v.0.0.1 - 초기상태 입니다.
 v.0.0.2 - README.md 제작과 기초 구조 설정을 끝냈습니다.
 <br>
 v.0.1.0 - express와 mongoDB를 연결하였습니다.
+v.0.1.1 - routing을 분리 했습니다.
 
 ## 참여자
 
@@ -112,6 +130,28 @@ formatter : [Prettier - Code formatter](https://marketplace.visualstudio.com/ite
 
 를 붙여 넣기한다 이중 필요없다 생각되는 문구는 지워도 무방하다
 
+나머지는 여기있다
+
+```json
+{
+    "recommendations": [
+        "pkief.material-icon-theme",
+        "akamud.vscode-theme-onedark",
+        "dzhavat.css-initial-value",
+        "pranaygp.vscode-css-peek",
+        "usernamehw.errorlens",
+        "ecmel.vscode-html-css",
+        "anteprimorac.html-end-tag-labels",
+        "solnurkarim.html-to-css-autocompletion",
+        "zignd.html-css-class-completion",
+        "ritwickdey.liveserver",
+        "christian-kohler.path-intellisense",
+        "esbenp.prettier-vscode",
+        "tabnine.tabnine-vscode"
+    ]
+}
+```
+
 ## 각주
 
 귀찮아서 템플릿 가져다 쓰고 대충 만들었으니 수정하실분은 부디 수정해주시기 바랍니다.
@@ -126,8 +166,10 @@ formatter : [Prettier - Code formatter](https://marketplace.visualstudio.com/ite
 
 What things you need to install the software and how to install them
 
-```
+````
+
 Give examples
+
 ```
 
 ### Installing
@@ -137,13 +179,17 @@ A step by step series of examples that tell you how to get a development env run
 Say what the step will be
 
 ```
+
 Give the example
+
 ```
 
 And repeat
 
 ```
+
 until finished
+
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
@@ -157,7 +203,9 @@ Explain how to run the automated tests for this system
 Explain what these tests test and why
 
 ```
+
 Give an example
+
 ```
 
 ### And coding style tests
@@ -165,8 +213,10 @@ Give an example
 Explain what these tests test and why
 
 ```
+
 Give an example
-``` -->
+
+```-->
 
 <!-- ## Deployment
 
@@ -185,3 +235,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).  -->
+
+```
+
+```
