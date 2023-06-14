@@ -113,6 +113,8 @@ npm run start:dev
 
 되도록 html, css, js 파일이름은 같게, 소문자로, 직관적이게, 띄어쓰기 없이 써주시기 바랍니다.
 
+.../는 축약입니다.
+
 ```html
 <!DOCTYPE html>
 <html lang="ko">
