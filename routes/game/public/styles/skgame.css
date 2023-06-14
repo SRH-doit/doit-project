@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+  }
+  
+  .game-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: #000;
+  }
+  
+  .game-grid {
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(30, 1fr);
+  }
+  
+  .score-container {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .score-label {
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /* 스네이크 색상 */
+  .snake-head {
+    background-color: #00ff00;
+  }
+  
+  .snake-body {
+    background-color: #00cc00;
+  }
+  
+  .food {
+    background-color: #ff0000;
+  }
+  
