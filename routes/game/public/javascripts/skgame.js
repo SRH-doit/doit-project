@@ -9,7 +9,7 @@ let snakeYSpeed = 0;
 let snakeBody = [];
 let foodX = 0;
 let foodY = 0;
-let score = 1;
+let score = 0;
 
 function createGameGrid() {
   gameGrid.innerHTML = '';
@@ -95,7 +95,7 @@ function gameOver() {
   snakeXSpeed = 1;
   snakeYSpeed = 0;
   snakeBody = [];
-  score = 1;
+  score = 0;
   scoreElement.innerText = score;
   createGameGrid();
   generateFood();
