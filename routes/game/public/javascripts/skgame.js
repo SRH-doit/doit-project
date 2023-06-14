@@ -102,8 +102,6 @@ function gameOver() {
   snakeXSpeed = 1;
   snakeYSpeed = 0;
   snakeBody = [];
-  foodX = 0;
-  foodY = 0;
   score = 0;
   scoreElement.innerText = score;
   createGameGrid();
