@@ -30,20 +30,19 @@ function moveSnake() {
   }
 
   const snakeHead = { x: snakeX, y: snakeY };
-  snakeBody.push(snakeHead);
-
-  if (snakeBody.length > score + 1) {
-    snakeBody.shift();
-  }
+  snakeBody.unshift(snakeHead);
 
   if (snakeX === foodX && snakeY === foodY) {
     score++;
     scoreElement.innerText = score;
     generateFood();
+  } else {
+    snakeBody.pop();
   }
 
   if (checkCollision()) {
     gameOver();
+    return;
   }
 
   updateGameGrid();
@@ -88,7 +87,7 @@ function generateFood() {
 }
 
 function checkCollision() {
-  for (let i = 0; i < snakeBody.length - 1; i++) {
+  for (let i = 1; i < snakeBody.length; i++) {
     if (snakeBody[i].x === snakeX && snakeBody[i].y === snakeY) {
       return true;
     }
@@ -108,12 +107,40 @@ function gameOver() {
   score = 0;
   scoreElement.innerText = score;
   createGameGrid();
-}
-
-function startGame() {
-  createGameGrid();
   generateFood();
-  setInterval(moveSnake, 200);
 }
 
-startGame();
+function handleKeyPress(event) {
+  const keyPressed = event.key;
+  switch (keyPressed) {
+    case 'ArrowUp':
+      if (snakeYSpeed !== 1) {
+        snakeXSpeed = 0;
+        snakeYSpeed = -1;
+      }
+      break;
+    case 'ArrowDown':
+      if (snakeYSpeed !== -1) {
+        snakeXSpeed = 0;
+        snakeYSpeed = 1;
+      }
+      break;
+    case 'ArrowLeft':
+      if (snakeXSpeed !== 1) {
+        snakeXSpeed = -1;
+        snakeYSpeed = 0;
+      }
+      break;
+    case 'ArrowRight':
+      if (snakeXSpeed !== -1) {
+        snakeXSpeed = 1;
+        snakeYSpeed = 0;
+      }
+      break;
+  }
+}
+
+document.addEventListener('keydown', handleKeyPress);
+createGameGrid();
+generateFood();
+setInterval(moveSnake, 200);
