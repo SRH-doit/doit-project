@@ -24,27 +24,13 @@ function moveSnake() {
   snakeX += snakeXSpeed;
   snakeY += snakeYSpeed;
 
-  if (snakeX < 0) snakeX = tileCount - 1;
-  if (snakeX >= tileCount) snakeX = 0;
-  if (snakeY < 0) snakeY = tileCount - 1;
-  if (snakeY >= tileCount) snakeY = 0;
+  if (snakeX < 0 || snakeX >= tileCount || snakeY < 0 || snakeY >= tileCount) {
+    gameOver();
+    return;
+  }
 
-  gameGrid.innerHTML = '';
-  snakeBody.forEach(segment => {
-    const snakeSegment = document.createElement('div');
-    snakeSegment.style.gridColumnStart = segment.x + 1;
-    snakeSegment.style.gridRowStart = segment.y + 1;
-    snakeSegment.classList.add('snake-body');
-    gameGrid.appendChild(snakeSegment);
-  });
-
-  const snakeHead = document.createElement('div');
-  snakeHead.style.gridColumnStart = snakeX + 1;
-  snakeHead.style.gridRowStart = snakeY + 1;
-  snakeHead.classList.add('snake-head');
-  gameGrid.appendChild(snakeHead);
-
-  snakeBody.push({ x: snakeX, y: snakeY });
+  const snakeHead = { x: snakeX, y: snakeY };
+  snakeBody.push(snakeHead);
 
   if (snakeBody.length > score + 1) {
     snakeBody.shift();
@@ -59,16 +45,46 @@ function moveSnake() {
   if (checkCollision()) {
     gameOver();
   }
+
+  updateGameGrid();
+}
+
+function updateGameGrid() {
+  const tiles = document.querySelectorAll('.tile');
+  tiles.forEach(tile => {
+    tile.classList.remove('snake-head', 'snake-body', 'food');
+  });
+
+  snakeBody.forEach((snakePart, index) => {
+    const snakePartElement = document.createElement('div');
+    snakePartElement.classList.add('snake-body');
+    snakePartElement.style.gridColumnStart = snakePart.x + 1;
+    snakePartElement.style.gridRowStart = snakePart.y + 1;
+    gameGrid.appendChild(snakePartElement);
+  });
+
+  const snakeHeadElement = document.createElement('div');
+  snakeHeadElement.classList.add('snake-head');
+  snakeHeadElement.style.gridColumnStart = snakeX + 1;
+  snakeHeadElement.style.gridRowStart = snakeY + 1;
+  gameGrid.appendChild(snakeHeadElement);
+
+  const foodElement = document.createElement('div');
+  foodElement.classList.add('food');
+  foodElement.style.gridColumnStart = foodX + 1;
+  foodElement.style.gridRowStart = foodY + 1;
+  gameGrid.appendChild(foodElement);
 }
 
 function generateFood() {
   foodX = Math.floor(Math.random() * tileCount);
   foodY = Math.floor(Math.random() * tileCount);
-  const food = document.createElement('div');
-  food.style.gridColumnStart = foodX + 1;
-  food.style.gridRowStart = foodY + 1;
-  food.classList.add('food');
-  gameGrid.appendChild(food);
+
+  snakeBody.forEach(snakePart => {
+    if (snakePart.x === foodX && snakePart.y === foodY) {
+      generateFood();
+    }
+  });
 }
 
 function checkCollision() {
@@ -81,45 +97,23 @@ function checkCollision() {
 }
 
 function gameOver() {
-  alert('Game Over!');
+  alert('Game Over');
   snakeX = 0;
   snakeY = 0;
   snakeXSpeed = 1;
   snakeYSpeed = 0;
   snakeBody = [];
+  foodX = 0;
+  foodY = 0;
   score = 0;
   scoreElement.innerText = score;
   createGameGrid();
 }
 
-function changeDirection(event) {
-  const LEFT_KEY = 'ArrowLeft';
-  const UP_KEY = 'ArrowUp';
-  const RIGHT_KEY = 'ArrowRight';
-  const DOWN_KEY = 'ArrowDown';
-
-  const key = event.key;
-
-  if (key === LEFT_KEY && snakeXSpeed !== 1) {
-    snakeXSpeed = -1;
-    snakeYSpeed = 0;
-  } else if (key === UP_KEY && snakeYSpeed !== 1) {
-    snakeXSpeed = 0;
-    snakeYSpeed = -1;
-  } else if (key === RIGHT_KEY && snakeXSpeed !== -1) {
-    snakeXSpeed = 1;
-    snakeYSpeed = 0;
-  } else if (key === DOWN_KEY && snakeYSpeed !== -1) {
-    snakeXSpeed = 0;
-    snakeYSpeed = 1;
-  }
-}
-
 function startGame() {
   createGameGrid();
   generateFood();
-  setInterval(moveSnake, 100);
+  setInterval(moveSnake, 200);
 }
 
-document.addEventListener('keydown', changeDirection);
 startGame();

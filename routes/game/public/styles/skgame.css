@@ -25,14 +25,13 @@
   .score-container {
     text-align: center;
     margin-top: 10px;
+    color: #fff;
   }
   
   .score-label {
     font-weight: bold;
-    color: #fff;
   }
   
-  /* 스네이크 색상 */
   .snake-head {
     background-color: #00ff00;
   }
@@ -43,5 +42,7 @@
   
   .food {
     background-color: #ff0000;
+    width: 20px;
+    height: 20px;
   }
   
