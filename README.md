@@ -104,6 +104,12 @@ npm run start:dev
 
 종료할때는 ctrl + c를 터미널에 입력해주시기 바랍니다
 
+# 자기 페이지 접속하는법:
+
+[http://localhost:3000/](http://localhost:3000/)에 접속해 주소창에 /{폴더이름}/{파일이름}을 치면 접속이 됩니다.
+
+예시) [http://localhost:3000/auth/login ](http://localhost:3000/auth/login)로 접속하면 auth폴더 안 login.html이 접속됩니다.
+
 ## 개발 방법
 
 **모르겠다면 슬랙의 문의사항에 올려주시기 바랍니다.**
