@@ -9,14 +9,16 @@ let snakeYSpeed = 0;
 let snakeBody = [];
 let foodX = 0;
 let foodY = 0;
-let score = 0;
+let score = 1;
 
 function createGameGrid() {
   gameGrid.innerHTML = '';
-  for (let i = 0; i < tileCount * tileCount; i++) {
-    const tile = document.createElement('div');
-    tile.classList.add('tile');
-    gameGrid.appendChild(tile);
+  for (let row = 0; row < tileCount; row++) {
+    for (let col = 0; col < tileCount; col++) {
+      const tile = document.createElement('div');
+      tile.classList.add('tile');
+      gameGrid.appendChild(tile);
+    }
   }
 }
 
@@ -54,25 +56,16 @@ function updateGameGrid() {
     tile.classList.remove('snake-head', 'snake-body', 'food');
   });
 
-  snakeBody.forEach((snakePart, index) => {
-    const snakePartElement = document.createElement('div');
-    snakePartElement.classList.add('snake-body');
-    snakePartElement.style.gridColumnStart = snakePart.x + 1;
-    snakePartElement.style.gridRowStart = snakePart.y + 1;
-    gameGrid.appendChild(snakePartElement);
+  snakeBody.forEach(snakePart => {
+    const snakePartIndex = snakePart.y * tileCount + snakePart.x;
+    tiles[snakePartIndex].classList.add('snake-body');
   });
 
-  const snakeHeadElement = document.createElement('div');
-  snakeHeadElement.classList.add('snake-head');
-  snakeHeadElement.style.gridColumnStart = snakeX + 1;
-  snakeHeadElement.style.gridRowStart = snakeY + 1;
-  gameGrid.appendChild(snakeHeadElement);
+  const snakeHeadIndex = snakeY * tileCount + snakeX;
+  tiles[snakeHeadIndex].classList.add('snake-head');
 
-  const foodElement = document.createElement('div');
-  foodElement.classList.add('food');
-  foodElement.style.gridColumnStart = foodX + 1;
-  foodElement.style.gridRowStart = foodY + 1;
-  gameGrid.appendChild(foodElement);
+  const foodIndex = foodY * tileCount + foodX;
+  tiles[foodIndex].classList.add('food');
 }
 
 function generateFood() {
@@ -102,7 +95,7 @@ function gameOver() {
   snakeXSpeed = 1;
   snakeYSpeed = 0;
   snakeBody = [];
-  score = 0;
+  score = 1;
   scoreElement.innerText = score;
   createGameGrid();
   generateFood();
