@@ -1,33 +1,56 @@
 const express = require("express");
-const mongoose = require("mongoose");
-const app = express();
+const path = require("path");
+const fs = require("fs");
+const connectDB = require("./database");
 const port = 3000;
-const mongoURI =
-    "mongodb+srv://admin:PaRRseqABOcfNMv8@cluster0.4boiy3r.mongodb.net/doitDB?retryWrites=true&w=majority";
 
-mongoose
-    .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-        console.log("MongoDB Atlas connected");
-    })
-    .catch((err) => {
-        console.error("Error connecting to MongoDB Atlas:", err);
+const app = express();
+
+connectDB();
+
+app.use(express.static(__dirname));
+
+app.get("/404", (req, res) => {
+    res.sendFile(path.join(__dirname, "/routes/topic/pages/404.html"));
+});
+
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "/routes/topic/pages/home.html"));
+});
+
+app.get("/:folder/:page", (req, res) => {
+    const folder = req.params.folder;
+    const page = req.params.page;
+
+    const filePath = path.join(
+        __dirname,
+        "routes",
+        folder,
+        "pages",
+        `${page}.html`
+    );
+
+    fs.access(filePath, fs.constants.F_OK, (err) => {
+        if (err) {
+            res.redirect("/404");
+        } else {
+            res.sendFile(filePath);
+        }
     });
+});
 
-const topic = require("./routes/topic/topic");
-app.use("/", topic);
+app.get("/:page", (req, res) => {
+    const page = req.params.page;
 
-const auth = require("./routes/auth/auth");
-app.use("/auth", auth);
+    const filePath = path.join(__dirname, "public", `${page}.html`);
 
-const game = require("./routes/game/game");
-app.use("/game", game);
-
-const post = require("./routes/post/post");
-app.use("/post", post);
-
-app.use((req, res, next) => {
-    res.status("404").send("<h1>Page not found</h1>");
+    fs.access(filePath, fs.constants.F_OK, (err) => {
+        if (err) {
+            res.redirect("/404");
+        } else {
+            res.sendFile(filePath);
+        }
+    });
 });
 
 app.listen(port, (err) => {
