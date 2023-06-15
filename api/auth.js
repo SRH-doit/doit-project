@@ -46,13 +46,26 @@ router.post("/login", async (req, res) => {
             return res.status(400).json({ error: "Invalid email or password" });
         }
 
-        const token = jwt.sign({ userId: user._id }, "doitisgoat");
+        const token = jwt.sign(
+            { userId: user._id, email: user.email, name: user.name },
+            "doitisgoat"
+        );
 
+        res.cookie("token", token, {
+            // httpOnly: true,
+            // secure: true,
+            // sameSite: "strict",
+        });
         res.json({ token });
     } catch (error) {
         console.error(error.message);
         res.status(500).json({ message: "서버 에러" });
     }
+});
+
+router.post("/logout", async (req, res) => {
+    res.clearCookie("token");
+    res.redirect("/");
 });
 
 module.exports = router;
