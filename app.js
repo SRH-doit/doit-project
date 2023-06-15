@@ -42,7 +42,7 @@ app.get("/:folder/:page", (req, res) => {
 app.get("/:page", (req, res) => {
     const page = req.params.page;
 
-    const filePath = path.join(__dirname, "public", `${page}.html`);
+    const filePath = path.join(__dirname, "routes", "pages", `${page}.html`);
 
     fs.access(filePath, fs.constants.F_OK, (err) => {
         if (err) {
