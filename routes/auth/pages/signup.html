@@ -8,27 +8,32 @@
         <title>Document</title>
     </head>
     <body>
-        <form method="POST" name="signup" action="api/signup">
+        <form
+            method="post"
+            name="signup"
+            action="api/signup"
+            onsubmit="submitForm(event)"
+        >
             <div class="signup_main">
                 <div class="signup_box">
                     <div class="signup_h1">회원가입</div>
                     <div class="signup_id_box">
                         <input
-                            id="signup_email"
+                            id="email"
                             type="email"
                             placeholder="이메일"
                             name="email"
                             required
                         />
                         <input
-                            id="signup_pwd"
+                            id="password"
                             type="password"
                             placeholder="비밀번호"
                             name="password"
                             required
                         />
                         <input
-                            id="signup_name"
+                            id="name"
                             type="text"
                             placeholder="이름"
                             name="name"
@@ -47,5 +52,34 @@
                 </div>
             </div>
         </form>
+        <script>
+            function submitForm(event) {
+                event.preventDefault();
+
+                const form = event.target;
+                const formData = {
+                    email: form.email.value,
+                    password: form.password.value,
+                    name: form.name.value,
+                };
+
+                const requestOptions = {
+                    method: "post",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(formData),
+                };
+
+                fetch("/auth/api/signup", requestOptions)
+                    .then((response) => response.json())
+                    .then((data) => {
+                        window.location.href = "/";
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                    });
+            }
+        </script>
     </body>
 </html>
