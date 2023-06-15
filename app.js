@@ -3,6 +3,7 @@ const path = require("path");
 const fs = require("fs");
 const connectDB = require("./database");
 const port = 3000;
+// const auth = require("/api/auth");
 
 const app = express();
 
@@ -17,6 +18,8 @@ app.get("/404", (req, res) => {
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "/routes/topic/pages/home.html"));
 });
+
+// app.use("/api", auth);
 
 app.get("/:folder/:page", (req, res) => {
     const folder = req.params.folder;

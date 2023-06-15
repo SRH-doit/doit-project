@@ -4,9 +4,48 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/routes/auth/public/styles/signup.css" />
         <title>Document</title>
     </head>
     <body>
-        <h1>Signup</h1>
+        <form method="POST" name="signup" action="api/signup">
+            <div class="signup_main">
+                <div class="signup_box">
+                    <div class="signup_h1">회원가입</div>
+                    <div class="signup_id_box">
+                        <input
+                            id="signup_email"
+                            type="email"
+                            placeholder="이메일"
+                            name="email"
+                            required
+                        />
+                        <input
+                            id="signup_pwd"
+                            type="password"
+                            placeholder="비밀번호"
+                            name="password"
+                            required
+                        />
+                        <input
+                            id="signup_name"
+                            type="text"
+                            placeholder="이름"
+                            name="name"
+                            required
+                        />
+                        <div class="signup_login">
+                            <span>계정이 있으신가요?</span>
+                            <a href="/auth/login">
+                                <span class="sdl">로그인</span>
+                            </a>
+                        </div>
+                        <button type="submit" class="signup_button">
+                            가입
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
     </body>
 </html>
