@@ -8,6 +8,8 @@ const app = express();
 
 connectDB();
 
+app.use(express.json());
+
 app.use(express.static(__dirname));
 
 app.get("/404", (req, res) => {
@@ -17,6 +19,9 @@ app.get("/404", (req, res) => {
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "/routes/topic/pages/home.html"));
 });
+
+const auth = require("./api/auth");
+app.use("/auth/api", auth);
 
 app.get("/:folder/:page", (req, res) => {
     const folder = req.params.folder;

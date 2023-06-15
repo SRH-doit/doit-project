@@ -39,3 +39,18 @@ function blink() {
     target.classList.toggle("active");
 }
 setInterval(blink, 500);
+
+window.onload = function () {
+    const target = document.querySelector(".sm-text");
+    let cookieName = document.cookie
+        .split("; ")
+        .find((row) => row.startsWith("token="))
+        ?.split("=")[1];
+    const token = cookieName;
+    const base64Url = token.split(".")[1]; // JWT 토큰에서 Base64로 인코딩된 페이로드 섹션 추출
+    const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/"); // URL-Safe Base64 문자열로 변환
+    const payload = JSON.parse(decodeURIComponent(escape(window.atob(base64))));
+    const name = payload.name; // 이름 값 가져오기
+    const value = name ? decodeURIComponent(name) : "anonymous";
+    target.textContent = `Do IT! WEB Project | ${value}`;
+};
