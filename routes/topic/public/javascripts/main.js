@@ -80,3 +80,15 @@ window.onload = function () {
     updateLoginButton(!!token);
     getName(token);
 };
+
+const link = document.querySelector("a");
+
+// link.addEventListener("click", (event) => {
+//     event.preventDefault(); // 기본 동작 중지
+
+//     // 링크 가져오기
+//     const href = link.getAttribute("href");
+
+//     // 페이지 이동
+//     window.location.href = href;
+// });
