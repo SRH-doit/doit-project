@@ -172,7 +172,7 @@ v.0.1.3 - 모든 파일을 자동으로 라우팅해준다 주소는 /상위폴�
 ## 참여자
 
 -   **국재윤** - _Initial work_ - [msg2324](https://github.com/igiza1213)
--   **정현서** - _Back-End and DevOps work_ - [정삼복](https://github.com/NANONANDFLASH)
+-   **정현서** - _Back-End and DevOps work_ - [정삼복](https://github.com/3boku)
 
 또한 여기서 [협업자들](https://github.com/SRH-doit) 을 보실수 있습니다!
 
