@@ -1,10 +1,11 @@
 @import "reset.css";
 
 body {
-    margin: 0;
-    padding: 0;
-    background: blanchedalmond;
-    font-family: "Noto Sans KR", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Sans KR", sans-serif;
 }
 h1,
 h2,
@@ -23,156 +24,158 @@ ul,
 ol,
 li,
 img {
-    padding: 0;
-    margin: 0;
-    line-height: 1.3em;
-    font-size: 16px;
-    font-weight: normal;
-    list-style: none;
-    text-decoration: none;
-    color: black;
-}
-
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: grey;
-    height: 70px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+  padding: 0;
+  margin: 0;
+  line-height: 1.3em;
+  font-size: 16px;
+  font-weight: normal;
+  list-style: none;
+  text-decoration: none;
+  color: black;
 }
 
 #warp {
-    width: 80%;
-    margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
 /* title */
 h1 {
-    text-align: center;
-    color: black;
-    font-size: 50px;
-    letter-spacing: 5px;
+  text-align: center;
+  color: black;
+  font-weight: 500;
+  font-size: 30px;
 }
 /* writeWord_box  */
 #writeWord_box {
-    margin: 13px auto;
-    text-align: center;
+  margin: 13px auto;
+  text-align: center;
 }
 #word_input {
-    width: 350px;
-    height: 100px;
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
-    border-radius: 3px;
-    border: none;
+  width: 350px;
+  height: 100px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  border-radius: 3px;
+  border: 1px solid black;
 }
 #word_input::placeholder {
-    font-size: 30px;
-    text-transform: uppercase;
-    font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 /* playerSet_box */
 #playerSet_box {
-    text-align: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 #playInfor {
-    width: 600px;
-    margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 #playInfor h2 {
-    color: rgb(37, 36, 36);
-    font-size: 25px;
-    font-weight: bold;
-    padding: 20px;
+  color: rgb(37, 36, 36);
+  font-size: 25px;
+  font-weight: bold;
+  padding: 20px;
 }
 #playInfor p {
-    color: rgb(37, 36, 36);
-    font-weight: 700;
-    text-align: left;
-    margin-left: 160px;
-    padding: 5px 0;
+  color: rgb(37, 36, 36);
+  font-weight: 700;
+  padding: 5px 0;
+}
+
+.btns {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
 }
 #player_number {
-    width: 30px;
-    height: 30px;
-    border-radius: 3px;
-    border: none;
-    padding-left: 6px;
-    box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid black;
+  padding-left: 6px;
+  box-sizing: border-box;
+  margin-right: 10px;
 }
 #player_number_btn {
-    background: dodgerblue;
-    width: 120px;
-    height: 50px;
-    margin-left: 10px;
-    border-radius: 3px;
-    border: 1px solid rgb(13, 67, 121);
-    cursor: pointer;
-    font-weight: bold;
+  background: dodgerblue;
+  width: 120px;
+  height: 50px;
+  border-radius: 3px;
+  border: 1px solid rgb(13, 67, 121);
+  cursor: pointer;
+  font-weight: bold;
 }
 /* player_nicknameBox */
 #player_nicknameBox {
-    width: 750px;
-    margin: 10px auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 #player_nicknameBox input {
-    width: 150px;
-    height: 30px;
-    border: none;
-    border-radius: 3px;
-    padding-left: 20px;
-    box-sizing: border-box;
-    margin: 5px 0;
-    font-size: 19px;
+  width: 150px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  margin: 5px 0;
+  font-size: 19px;
 }
 #player_nicknameBox span {
-    font-size: 20px;
-    padding: 20px 0;
-    margin-left: 10px;
-    font-weight: 300;
+  font-size: 20px;
+  padding: 20px 0;
+  margin-left: 10px;
+  font-weight: 300;
 }
 #player_nicknameBox button {
-    background: rgb(37, 36, 36);
-    color: crimson;
-    margin-left: 50px;
-    width: 200px;
-    height: 50px;
-    border-radius: 3px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
+  background: rgb(37, 36, 36);
+  color: crimson;
+  width: 200px;
+  height: 50px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
 }
 /* gameTurn_box */
 #gameTurn_box {
-    width: 600px;
-    margin: 0 auto;
-    text-align: center;
+  margin: 0 auto;
+  text-align: center;
 }
 /* gameTurn_box playerList_box */
 #playerList_box {
-    font-size: 19px;
-    font-weight: 550;
-    text-align: center;
+  font-size: 19px;
+  font-weight: 550;
+  text-align: center;
 }
 #playerList_box span {
-    font-size: 19px;
+  font-size: 19px;
 }
 /* gameTurn_box displayTurn_box */
 #displayTurn_box {
-    font-size: 50px;
-    font-weight: 900;
-    color: rgb(219, 219, 219);
+  font-size: 20px;
+  font-weight: 900;
+  color: rgb(219, 219, 219);
 }
 /* displayWord_box */
 #displayWord_box {
-    text-align: center;
-    color: rgb(219, 219, 219);
-    font-weight: bold;
-    font-size: 22px;
-    padding: 30px;
+  text-align: center;
+  color: rgb(219, 219, 219);
+  font-weight: bold;
+  font-size: 22px;
+  /* padding: 30px; */
 }

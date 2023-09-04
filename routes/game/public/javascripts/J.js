@@ -18,8 +18,8 @@ const makeNicknameObj = {
     for (let i = 0; i < number; i++) {
       let player_name = document.createElement("input");
       let player_text = document.createElement("span");
-      player_text.textContent = i + 1 + "player: ";
-      this.btn.textContent = "닉네임 설정 후 STATR";
+      player_text.textContent = i + 1 + "player";
+      this.btn.textContent = "Start after setting a nickname";
       targeting.appendChild(player_text);
       targeting.appendChild(player_name);
       targeting.appendChild(this.btn);
@@ -36,7 +36,7 @@ propertySet = {
     target.readOnly = tf;
   },
   falseToggle: function () {
-    player_number_btn.textContent = "참가자 인원수";
+    player_number_btn.textContent = "number of people";
     player_nickname_Box.innerHTML = "";
     word_input.placeholder = "game close!";
     player_number.style.visibility = "visible";
@@ -48,10 +48,12 @@ propertySet = {
     word_input.readOnly = true;
     toggleResetBtn = true;
     turnCount = 0;
+    player_number.style.display = "block";
   },
   trueToggle: function () {
     player_number_btn.textContent = "RESET";
-    player_number.style.visibility = "hidden";
+    // player_number.style.visibility = "hidden";
+    player_number.style.display = "none";
     toggleResetBtn = false;
     stopGame = true;
   },
@@ -81,7 +83,7 @@ function checkWord() {
   ) {
     standardWord = comparisonWord;
   } else {
-    alert("마! 니 틀릿다! \n 게임이 초기화 됩니다!");
+    alert("Wrong! \n game resets");
     propertySet.falseToggle();
     stopGame = false;
   }
@@ -120,11 +122,15 @@ function checkNickname() {
   if (checkSpaceName.length === userNickname.length) {
     showNickname();
     openGame();
-    turn_display.textContent = `Start Player : ${checkSpaceName[0]} 님!! 시작단어를 입력하세요!`;
+    turn_display.textContent = `Start Player : ${checkSpaceName[0]} Please enter a starting word!`;
   } else {
     userNickname = [];
     checkSpaceName = [];
-    propertySet.bundle(word_input, null, "닉네임 전부 입력 시 열림!");
+    propertySet.bundle(
+      word_input,
+      null,
+      "Opens when all nicknames are entered"
+    );
   }
 }
 
@@ -152,7 +158,7 @@ function checkNumber() {
       player_nickname_Box,
       null,
       null,
-      "2명 이상 플레이 가능! RESET버튼!"
+      "2 or more players can play! RESET button!"
     );
   } else {
     makeNicknameInput(startNumber);

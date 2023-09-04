@@ -1,85 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/routes/auth/public/styles/signup.css" />
-        <title>Document</title>
-    </head>
-    <body>
-        <form
-            method="post"
-            name="signup"
-            action="api/signup"
-            onsubmit="submitForm(event)"
-        >
-            <div class="signup_main">
-                <div class="signup_box">
-                    <div class="signup_h1">회원가입</div>
-                    <div class="signup_id_box">
-                        <input
-                            id="email"
-                            type="email"
-                            placeholder="이메일"
-                            name="email"
-                            required
-                        />
-                        <input
-                            id="password"
-                            type="password"
-                            placeholder="비밀번호"
-                            name="password"
-                            required
-                        />
-                        <input
-                            id="name"
-                            type="text"
-                            placeholder="이름"
-                            name="name"
-                            required
-                        />
-                        <div class="signup_login">
-                            <span>계정이 있으신가요?</span>
-                            <a href="/auth/login">
-                                <span class="sdl">로그인</span>
-                            </a>
-                        </div>
-                        <button type="submit" class="signup_button">
-                            가입
-                        </button>
-                    </div>
-                </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/routes/auth/public/styles/signup.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form
+      method="post"
+      name="signup"
+      action="api/signup"
+      onsubmit="submitForm(event)"
+    >
+      <div class="signup_main">
+        <div class="signup_box">
+          <div class="signup_h1">Sign Up</div>
+          <div class="signup_id_box">
+            <input
+              id="email"
+              type="email"
+              placeholder="email"
+              name="email"
+              required
+            />
+            <input
+              id="password"
+              type="password"
+              placeholder="password"
+              name="password"
+              required
+            />
+            <input
+              id="name"
+              type="text"
+              placeholder="name"
+              name="name"
+              required
+            />
+            <div class="signup_login">
+              <span>Do you have an account?</span>
+              <a href="/auth/login">
+                <span class="sdl">Login</span>
+              </a>
             </div>
-        </form>
-        <script>
-            function submitForm(event) {
-                event.preventDefault();
+            <button type="submit" class="signup_button">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script>
+      function submitForm(event) {
+        event.preventDefault();
 
-                const form = event.target;
-                const formData = {
-                    email: form.email.value,
-                    password: form.password.value,
-                    name: form.name.value,
-                };
+        const form = event.target;
+        const formData = {
+          email: form.email.value,
+          password: form.password.value,
+          name: form.name.value,
+        };
 
-                const requestOptions = {
-                    method: "post",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(formData),
-                };
+        const requestOptions = {
+          method: "post",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        };
 
-                fetch("/auth/api/signup", requestOptions)
-                    .then((response) => response.json())
-                    .then((data) => {
-                        window.location.href = "/";
-                    })
-                    .catch((error) => {
-                        console.error(error);
-                    });
-            }
-        </script>
-    </body>
+        fetch("/auth/api/signup", requestOptions)
+          .then((response) => response.json())
+          .then((data) => {
+            window.location.href = "/";
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      }
+    </script>
+  </body>
 </html>

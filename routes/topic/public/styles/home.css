@@ -1,13 +1,16 @@
 @import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Indie+Flower&display=swap");
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
 }
 
 body {
   background-color: white;
-  font-family: "ALLtext", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
 }
 
 .navbar {
@@ -15,35 +18,28 @@ body {
   top: 0;
   left: 0;
   background: white;
-  height: 100px;
+  height: 6rem;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: solid 2px rgb(213, 213, 213);
-  font-size: 25px;
-  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
   gap: 20px;
   padding: 10px;
 }
 
-.navbar > a {
-  color: black;
-}
-
 .nav-btn {
-  width: 200px;
-  height: 100%;
-  /* border: solid 2px RGB(115, 83, 234);
-  border-radius: 20px; */
+  width: 8rem;
+  height: 70%;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
 }
 
 .nav-btn:hover {
-  width: 200px;
-  height: 100%;
-  padding: 20px;
-  background-color: rgb(238, 238, 238);
-  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
 }
 
 .navbar a {
@@ -53,33 +49,44 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Dung", sans-serif;
   color: black;
 }
 
 .wrap {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: RGB(115, 83, 234);
   text-align: center;
 }
 
-.imgbox > img {
-  width: 700px;
-  height: 220px;
+.imgbox {
+  width: 250px;
+  height: 250px;
+  background-image: url("/routes/topic/public/img/__logo2.png");
 }
 
 .lg-text {
+  margin-top: 1rem;
   font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 5px;
-  font-family: "Dung", sans-serif;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  font-family: "Caveat";
 }
 
 .sm-text {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-family: "ALLtext", sans-serif;
+}
+
+.name {
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Indie Flower";
 }
 
 #dynamic {
@@ -95,9 +102,40 @@ body {
   right: -10px;
   width: 4px;
   height: 100%;
-  background-color: RGB(115, 83, 234);
 }
 
 #dynamic.active::after {
   display: none;
+}
+
+@media (max-width: 550px) {
+  .lg-text {
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+
+  .sm-text {
+    font-size: 1.5rem;
+  }
+
+  .nav-btn {
+    width: 8rem;
+    height: 70%;
+    font-size: 15px;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+  }
+
+  .name {
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: "Indie Flower";
+  }
+
+  .imgbox {
+    width: 125px;
+    height: 125px;
+    background-image: url("/routes/topic/public/img/__logo.png");
+  }
 }

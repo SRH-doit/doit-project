@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="/routes/game/public/styles/dice.css" />
-        <title>주사위 프로그램</title>
-    </head>
-    <body>
-        <div>
-            <label for="dice-count">주사위 개수:</label>
-            <input type="number" id="dice-count" min="1" max="100" />
-            <button id="roll-button">주사위 던지기</button>
-            <div class="dice-container" id="dice-results"></div>
-            <div class="sum" id="sum-result"></div>
-            <script src="/routes/game/public/javascripts/dice.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/routes/game/public/styles/dice.css" />
+    <title>Dice Program</title>
+  </head>
+  <body>
+    <div>
+      <div class="a">
+        <div class="b">
+          <label for="dice-count">Number of dice:</label>
+          <input type="number" id="dice-count" min="1" max="100" />
         </div>
-    </body>
+        <div class="c">
+          <button id="roll-button">Throw dice</button>
+        </div>
+      </div>
+      <div class="dice-container" id="dice-results"></div>
+      <div class="sum" id="sum-result"></div>
+      <script src="/routes/game/public/javascripts/dice.js"></script>
+    </div>
+  </body>
 </html>

@@ -1,88 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/routes/auth/public/styles/login.css" />
-        <title>Do IT WEB project | Home</title>
-    </head>
-    <body>
-        <form method="post" action="api/login" onsubmit="submitForm(event)">
-            <div class="main">
-                <div class="box">
-                    <div class="school_name">
-                        Seoul Robot <br />
-                        <em>Highschool</em>
-                    </div>
-                    <div class="id_box">
-                        <input
-                            id="userid"
-                            type="email"
-                            placeholder="이메일"
-                            name="email"
-                            required
-                        />
-                        <input
-                            id="pwd"
-                            type="password"
-                            placeholder="비밀번호"
-                            name="password"
-                            required
-                        />
-                        <div class="id_check">
-                            <input id="idckb" type="checkbox" size="10" />
-                            <span class="idsave"> 로그인 정보 저장하기 </span>
-                        </div>
-                        <button type="submit " class="login_button">
-                            로그인
-                        </button>
-                        <div class="anotherlogin">
-                            <img src="/routes/auth/public/images/google.png" />
-                            <img
-                                src="/routes/auth/public/images/facebook.jpg"
-                            />
-                            <img src="/routes/auth/public/images/Github.png" />
-                            <img src="/routes/auth/public/images/apple.png" />
-                        </div>
-                    </div>
-                    <div class="more">
-                        <div class="lost">비밀번호를 잊으셨나요?</div>
-                        <a href="/auth/signup">
-                            <div class="signup">회원가입</div>
-                        </a>
-                    </div>
-                </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/routes/auth/public/styles/login.css" />
+    <title>Do IT WEB project | Home</title>
+  </head>
+  <body>
+    <form method="post" action="api/login" onsubmit="submitForm(event)">
+      <div class="main">
+        <div class="box">
+          <div class="school_name">
+            Seoul Robot <br />
+            <em>Highschool</em>
+          </div>
+          <div class="id_box">
+            <input
+              id="userid"
+              type="email"
+              placeholder="email"
+              name="email"
+              required
+            />
+            <input
+              id="pwd"
+              type="password"
+              placeholder="password"
+              name="password"
+              required
+            />
+            <div class="id_check">
+              <input id="idckb" type="checkbox" size="10" />
+              <span class="idsave"> Save Login Info </span>
             </div>
-        </form>
-        <script>
-            function submitForm(event) {
-                event.preventDefault();
+            <button type="submit " class="login_button">Login</button>
+            <div class="anotherlogin">
+              <img src="/routes/auth/public/images/google.png" />
+              <img src="/routes/auth/public/images/facebook.jpg" />
+              <img src="/routes/auth/public/images/Github.png" />
+              <img src="/routes/auth/public/images/apple.png" />
+            </div>
+          </div>
+          <div class="more">
+            <div class="lost">Forgot your password?</div>
+            <a href="/auth/signup">
+              <div class="signup">Sign Up</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script>
+      function submitForm(event) {
+        event.preventDefault();
 
-                const form = event.target;
-                const formData = {
-                    email: form.email.value,
-                    password: form.password.value,
-                    name: form.name.value,
-                };
+        const form = event.target;
+        const formData = {
+          email: form.email.value,
+          password: form.password.value,
+          name: form.name.value,
+        };
 
-                const requestOptions = {
-                    method: "post",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(formData),
-                };
+        const requestOptions = {
+          method: "post",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        };
 
-                fetch("/auth/api/login", requestOptions)
-                    .then((response) => response.json())
-                    .then((data) => {
-                        window.location.href = "/";
-                    })
-                    .catch((error) => {
-                        console.error(error);
-                    });
-            }
-        </script>
-    </body>
+        fetch("/auth/api/login", requestOptions)
+          .then((response) => response.json())
+          .then((data) => {
+            window.location.href = "/";
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      }
+    </script>
+  </body>
 </html>
