@@ -152,16 +152,6 @@ npm run start:dev
 
 js와 css는 따로 규격이있지는 않습니다. css안에 `css @import "reset.css"; `만 잘써주세요
 
-## atlas
-
-```Dotenv
-MONGO_URL = mongodb+srv://admin:PaRRseqABOcfNMv8@cluster0.4boiy3r.mongodb.net/doitDB?retryWrites=true&w=majority
-Atlas_id = "driveonly235@gmail.com"
-Atlas_pw = "dbswornR1234"
-DB_name = "doitDB"
-collection_name = "usertbl"
-```
-
 ## 진행 상황
 
 v.0.0.1 - 초기상태 입니다.
